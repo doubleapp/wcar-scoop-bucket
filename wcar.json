@@ -1,22 +1,17 @@
 {
-  "version": "1.0.1",
-  "description": "Windows tray app that saves and restores desktop sessions (window positions, terminal CWDs, Explorer folders, Docker state)",
+  "version": "1.1.0",
+  "description": "Window Configuration Auto Restorer — saves and restores app window layouts across reboots.",
   "homepage": "https://github.com/doubleapp/wcar",
   "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/doubleapp/wcar/releases/download/v1.0.1/wcar-1.0.1-win-x64.zip",
-      "hash": "169301eca2ccba3b09ad4e7fa814bf6a0c7e1115cdcf801512c7e96f542f5032"
-    }
+  "url": "https://github.com/doubleapp/wcar/releases/download/v1.1.0/wcar-1.1.0-win-x64.zip",
+  "hash": "2ac922480d35e2425acf36cc514c2876f75a87e73e2f29ac35612ef3a8712cd2",
+  "bin": "wcar.exe",
+  "shortcuts": [["wcar.exe", "WCAR"]],
+  "persist": "%LOCALAPPDATA%\WCAR",
+  "checkver": {
+    "github": "https://github.com/doubleapp/wcar"
   },
-  "bin": [
-    "wcar.exe"
-  ],
-  "post_install": [
-    "Write-Host 'WCAR installed! Run wcar.exe to start the tray app.' -ForegroundColor Green"
-  ],
-  "notes": [
-    "WCAR runs as a system tray icon. Right-click for Save/Restore Session, Scripts, and Settings.",
-    "Data stored in: $env:LOCALAPPDATA\\WCAR\\"
-  ]
+  "autoupdate": {
+    "url": "https://github.com/doubleapp/wcar/releases/download/v$version/wcar-$version-win-x64.zip"
+  }
 }
