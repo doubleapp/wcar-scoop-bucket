@@ -1,22 +1,22 @@
-﻿{
-    "version":  "1.0.0",
-    "license":  "MIT",
-    "post_install":  [
-                         "Write-Host \u0027WCAR installed! Run wcar.exe to start the tray app.\u0027 -ForegroundColor Green"
-                     ],
-    "architecture":  {
-                         "64bit":  {
-                                       "hash":  "31c626c7da7b63e05eeb02ba5d960fbc1a61d310bd277485503897b95103200e",
-                                       "url":  "https://github.com/doubleapp/wcar/releases/download/v1.0.0/wcar-1.0.0-win-x64.zip"
-                                   }
-                     },
-    "description":  "Windows tray app that saves and restores desktop sessions (window positions, terminal CWDs, Explorer folders, Docker state)",
-    "notes":  [
-                  "WCAR runs as a system tray icon. Right-click for Save/Restore Session, Scripts, and Settings.",
-                  "Data stored in: $env:LOCALAPPDATA\\WCAR\\"
-              ],
-    "homepage":  "https://github.com/doubleapp/wcar",
-    "bin":  [
-                "wcar.exe"
-            ]
+{
+  "version": "1.0.1",
+  "description": "Windows tray app that saves and restores desktop sessions (window positions, terminal CWDs, Explorer folders, Docker state)",
+  "homepage": "https://github.com/doubleapp/wcar",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/doubleapp/wcar/releases/download/v1.0.1/wcar-1.0.1-win-x64.zip",
+      "hash": "169301eca2ccba3b09ad4e7fa814bf6a0c7e1115cdcf801512c7e96f542f5032"
+    }
+  },
+  "bin": [
+    "wcar.exe"
+  ],
+  "post_install": [
+    "Write-Host 'WCAR installed! Run wcar.exe to start the tray app.' -ForegroundColor Green"
+  ],
+  "notes": [
+    "WCAR runs as a system tray icon. Right-click for Save/Restore Session, Scripts, and Settings.",
+    "Data stored in: $env:LOCALAPPDATA\\WCAR\\"
+  ]
 }
